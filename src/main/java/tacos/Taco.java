@@ -18,6 +18,7 @@ public class Taco {
 	// tag::allButValidation[]
 	private String name;
 	// end::allButValidation[]
+	@NotNull(message = "Choose at least one ingredient")
 	@Size(min=1, message="You must choose at least 1 ingredient")
 	// tag::allButValidation[]
 	private List<String> ingredients;
