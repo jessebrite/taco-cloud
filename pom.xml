@@ -81,10 +81,24 @@
       <version>1.3.04</version>
     </dependency>
 
+<!--    Hibernate validator for validation-->
     <dependency>
       <groupId>org.hibernate</groupId>
       <artifactId>hibernate-validator</artifactId>
       <version>6.1.6.Final</version>
+    </dependency>
+
+    <!--  JDBC connectivity-->
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-jdbc</artifactId>
+    </dependency>
+
+<!--    H2DB for persistence-->
+    <dependency>
+      <groupId>com.h2database</groupId>
+      <artifactId>h2</artifactId>
+      <scope>runtime</scope>
     </dependency>
   </dependencies>
 
