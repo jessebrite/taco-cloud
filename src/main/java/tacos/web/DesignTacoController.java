@@ -47,6 +47,7 @@ public class DesignTacoController {
 
 	@GetMapping
 	public String showDesignForm(Model model) {
+		log.info("   --- Designing taco");
 		List<Ingredient> ingredients = new ArrayList<>();
 
 		// populating the findAll results
