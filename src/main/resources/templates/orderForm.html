@@ -10,8 +10,13 @@
   <body>
     <form method="POST" th:action="@{/orders}" th:object="${order}">
       <h1>Order your taco creations!</h1>
+
       <img th:src="@{/images/TacoCloud.png}"/>
+      <h3>Your tacos in this order:</h3>
       <a id="another" th:href="@{/design}">Design another taco</a><br/>
+      <ul>
+        <li th:each="taco : ${order.tacos}"><span th:text="${taco.name}">taco name</span></li>
+      </ul>
 
       <div th:if="${#fields.hasErrors()}">
         <span class="validationError">
@@ -20,35 +25,35 @@
       </div>
 
       <h3>Deliver my taco masterpieces to...</h3>
-      <label for="name">Name: </label>
-      <input th:field="*{name}" type="text"/>
+      <label for="deliveryName">Name: </label>
+      <input th:field="*{deliveryName}" type="text"/>
       <span class="validationError"
-            th:if="${#fields.hasErrors('name')}"
-            th:errors="*{name}">Name Error</span>
+            th:if="${#fields.hasErrors('deliveryName')}"
+            th:errors="*{deliveryName}">Name Error</span>
       <br>
       <label for="street">Street address: </label>
-      <input th:field="*{street}" type="text"/>
+      <input th:field="*{deliveryStreet}" type="text"/>
       <span class="validationError"
-            th:if="${#fields.hasErrors('street')}"
-            th:errors="*{street}">Street Num Error</span>
+            th:if="${#fields.hasErrors('deliveryStreet')}"
+            th:errors="*{deliveryStreet}">Street Num Error</span>
       <br>
       <label for="city">City: </label>
-      <input th:field="*{city}" type="text"/>
+      <input th:field="*{deliveryCity}" type="text"/>
       <span class="validationError"
-            th:if="${#fields.hasErrors('city')}"
-            th:errors="*{city}">City Error</span>
+            th:if="${#fields.hasErrors('deliveryCity')}"
+            th:errors="*{deliveryCity}">City Error</span>
       <br>
       <label for="state">State: </label>
-      <input th:field="*{state}" type="text"/>
+      <input th:field="*{deliveryState}" type="text"/>
       <span class="validationError"
-            th:if="${#fields.hasErrors('state')}"
-            th:errors="*{state}">State Error</span>
+            th:if="${#fields.hasErrors('deliveryState')}"
+            th:errors="*{deliveryState}">State Error</span>
       <br>
       <label for="zip">Zip code: </label>
-      <input th:field="*{zip}" type="text"/>
+      <input th:field="*{deliveryZip}" type="text"/>
       <span class="validationError"
-            th:if="${#fields.hasErrors('zip')}"
-            th:errors="*{zip}">Zip Error</span>
+            th:if="${#fields.hasErrors('deliveryZip')}"
+            th:errors="*{deliveryZip}">Zip Error</span>
       <br>
       <h3>Here's how I'll pay...</h3>
       <label for="ccNumber">Credit Card #: </label>

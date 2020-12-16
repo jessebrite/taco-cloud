@@ -4,7 +4,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 import tacos.Ingredient;
-import tacos.data.IngredientRepository;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -27,7 +26,7 @@ public class JdbcIngredientRepository implements IngredientRepository {
 	}
 
 	@Override
-	public Ingredient findOne(String id) {
+	public Ingredient findById(String id) {
 		return jdbc.queryForObject(
 			"SELECT id, name, type FROM Ingredient WHERE id=?",
 			this::mapRowToIngredient, id);
