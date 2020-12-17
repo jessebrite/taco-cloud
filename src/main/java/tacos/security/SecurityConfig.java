@@ -7,8 +7,8 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.security.crypto.password.StandardPasswordEncoder;
 
 import javax.annotation.Resource;
 
@@ -26,7 +26,14 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 					.access("permitAll")
 			.and()
 				.formLogin()
-					.loginPage("/login");
+					.loginPage("/login")
+			.and()
+				.formLogin()
+					.loginPage("/login")
+						.defaultSuccessUrl("/design", true)
+			.and()
+				.logout()
+					.logoutSuccessUrl("/");
 	}
 
 	@Resource(name = "userRepositoryUserDetailsService")
@@ -34,16 +41,16 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
 //	use the next method "BCryptPasswordEncoder" instead
 //	only using for testing purposes
-	@Bean
-	public PasswordEncoder passwordEncoder() {
-		return new StandardPasswordEncoder("53cr3t");
-	}
+//	@Bean
+//	public PasswordEncoder passwordEncoder() {
+//		return new StandardPasswordEncoder("53cr3t");
+//	}
 
 //	uncomment to use instead of the deprecated StandardPasswordEncoder
-//	@Bean
-//	public PasswordEncoder encoder() {
-//		return new BCryptPasswordEncoder();
-//	}
+	@Bean
+	public PasswordEncoder passwordEncoder() {
+		return new BCryptPasswordEncoder();
+	}
 
 	@Override
 	protected void configure(AuthenticationManagerBuilder auth) throws Exception {
