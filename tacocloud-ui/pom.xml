@@ -9,7 +9,7 @@
     <version>0.0.1-SNAPSHOT</version>
   </parent>
 
-  <groupId>com.onus</groupId>
+<!--  <groupId>com.onus</groupId>-->
   <artifactId>tacocloud-ui</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <name>tacocloud-ui</name>
