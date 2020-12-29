@@ -8,6 +8,7 @@
     <version>0.0.1-SNAPSHOT</version>
     <relativePath/> <!-- lookup parent from repository -->
   </parent>
+
   <groupId>com.onus</groupId>
   <artifactId>tacocloud-data</artifactId>
   <version>0.0.1-SNAPSHOT</version>
@@ -15,10 +16,18 @@
   <description>Demo project for Spring Boot</description>
 
   <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     <java.version>11</java.version>
   </properties>
 
   <dependencies>
+    <!-- TacoCloud dependencies -->
+    <dependency>
+      <groupId>com.onus</groupId>
+      <artifactId>tacocloud-domain</artifactId>
+      <version>0.0.1-SNAPSHOT</version>
+    </dependency>
 
     <dependency>
       <groupId>org.springframework.boot</groupId>
@@ -48,11 +57,6 @@
       <scope>test</scope>
     </dependency>
 
-    <dependency>
-      <groupId>org.springframework.security</groupId>
-      <artifactId>spring-security-test</artifactId>
-      <scope>test</scope>
-    </dependency>
   </dependencies>
 
 </project>
