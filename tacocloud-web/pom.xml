@@ -12,7 +12,8 @@
   <artifactId>tacocloud-web</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <name>tacocloud-web</name>
-  <description>DTaco Cloud Web</description>
+  <packaging>jar</packaging>
+  <description>Taco Cloud Web</description>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -21,6 +22,18 @@
   </properties>
 
   <dependencies>
+    <!-- TacoCloud dependencies -->
+    <dependency>
+      <groupId>com.onus</groupId>
+      <artifactId>tacocloud-data</artifactId>
+      <version>${tacocloud.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>com.onus</groupId>
+      <artifactId>tacocloud-domain</artifactId>
+      <version>${tacocloud.version}</version>
+    </dependency>
 
     <!-- Necessary Boot starters -->
     <dependency>
@@ -38,24 +51,7 @@
       <artifactId>spring-boot-starter-security</artifactId>
     </dependency>
 
-    <!-- Misc -->
-    <dependency>
-      <groupId>org.webjars</groupId>
-      <artifactId>jquery</artifactId>
-      <version>3.3.1</version>
-    </dependency>
-
-    <dependency>
-      <groupId>org.webjars</groupId>
-      <artifactId>mustachejs</artifactId>
-      <version>2.2.1</version>
-    </dependency>
-
-    <dependency>
-      <groupId>nz.net.ultraq.thymeleaf</groupId>
-      <artifactId>thymeleaf-layout-dialect</artifactId>
-    </dependency>
-
+    <!-- Lombok -->
     <dependency>
       <groupId>org.projectlombok</groupId>
       <artifactId>lombok</artifactId>
@@ -63,14 +59,39 @@
       <scope>provided</scope>
     </dependency>
 
-    <dependency>
-      <groupId>org.thymeleaf.extras</groupId>
-      <artifactId>thymeleaf-extras-springsecurity4</artifactId>
-    </dependency>
+    <!-- Misc -->
+<!--    <dependency>-->
+<!--      <groupId>org.webjars</groupId>-->
+<!--      <artifactId>jquery</artifactId>-->
+<!--      <version>3.3.1</version>-->
+<!--    </dependency>-->
 
+<!--    <dependency>-->
+<!--      <groupId>org.webjars</groupId>-->
+<!--      <artifactId>mustachejs</artifactId>-->
+<!--      <version>2.2.1</version>-->
+<!--    </dependency>-->
+
+<!--    <dependency>-->
+<!--      <groupId>nz.net.ultraq.thymeleaf</groupId>-->
+<!--      <artifactId>thymeleaf-layout-dialect</artifactId>-->
+<!--    </dependency>-->
+
+<!--    <dependency>-->
+<!--      <groupId>org.thymeleaf.extras</groupId>-->
+<!--      <artifactId>thymeleaf-extras-springsecurity4</artifactId>-->
+<!--    </dependency>-->
+
+    <!-- Test dependencies -->
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-test</artifactId>
+      <scope>test</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>org.seleniumhq.selenium</groupId>
+      <artifactId>htmlunit-driver</artifactId>
       <scope>test</scope>
     </dependency>
 

@@ -35,11 +35,13 @@
       <version>${tacocloud.version}</version>
     </dependency>
 
+    <!-- Necessary Boot starters -->
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-security</artifactId>
     </dependency>
 
+    <!-- Lombok-->
     <dependency>
       <groupId>org.projectlombok</groupId>
       <artifactId>lombok</artifactId>
@@ -47,16 +49,11 @@
       <scope>provided</scope>
     </dependency>
 
+    <!-- Test dependencies -->
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-test</artifactId>
       <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>Unknown</groupId>
-      <artifactId>Unknown</artifactId>
-      <version>Unknown</version>
-      <scope>compile</scope>
     </dependency>
 
   </dependencies>

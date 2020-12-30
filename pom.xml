@@ -15,7 +15,7 @@
   <version>0.0.1-SNAPSHOT</version>
   <name>taco-cloud</name>
   <packaging>pom</packaging>
-  <description>Taco Cloud Example</description>
+  <description>Taco Cloud</description>
 
   <properties>
 <!--    <java.version>11</java.version>-->
@@ -27,7 +27,6 @@
   <modules>
     <module>tacos</module>
     <module>tacocloud-api</module>
-    <module>tacos</module>
     <module>tacocloud-data</module>
     <module>tacocloud-domain</module>
     <module>tacocloud-security</module>

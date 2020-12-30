@@ -1,4 +1,4 @@
-package tacos;
+package com.onus.tacoclouddomain;
 
 import lombok.Data;
 import org.hibernate.validator.constraints.CreditCardNumber;

@@ -1,19 +1,19 @@
-package tacos.web;
+package com.onus.tacocloudweb;
 
+import com.onus.tacoclouddata.IngredientRepository;
+import com.onus.tacoclouddata.TacoRepository;
+import com.onus.tacoclouddata.UserRepository;
+import com.onus.tacoclouddomain.Ingredient;
+import com.onus.tacoclouddomain.Ingredient.Type;
+import com.onus.tacoclouddomain.Order;
+import com.onus.tacoclouddomain.Taco;
+import com.onus.tacoclouddomain.User;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.*;
-import tacos.Ingredient;
-import tacos.Ingredient.Type;
-import tacos.Order;
-import tacos.Taco;
-import tacos.User;
-import tacos.data.IngredientRepository;
-import tacos.data.TacoRepository;
-import tacos.data.UserRepository;
 
 import javax.validation.Valid;
 import java.security.Principal;
@@ -28,8 +28,8 @@ import java.util.stream.Collectors;
 public class DesignTacoController {
 
 	private final IngredientRepository ingredientRepo;
-	private TacoRepository designRepo;
-	private UserRepository userRepo;
+	private final TacoRepository designRepo;
+	private final UserRepository userRepo;
 
 	@Autowired
 	public DesignTacoController(

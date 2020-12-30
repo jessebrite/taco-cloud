@@ -9,7 +9,6 @@
     <version>0.0.1-SNAPSHOT</version>
   </parent>
 
-<!--  <groupId>com.onus</groupId>-->
   <artifactId>tacocloud-ui</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <name>tacocloud-ui</name>
@@ -17,7 +16,7 @@
 
   <properties>
     <node.version>v14.15.3</node.version>
-<!--    <yarn.version>v0.24.6</yarn.version>-->
+    <yarn.version>v0.24.6</yarn.version>
     <frontend-maven-plugin.version>1.4</frontend-maven-plugin.version> <!-- not sure of this version -->
     <environment>dev</environment>
   </properties>
@@ -54,6 +53,7 @@
         <version>${frontend-maven-plugin.version}</version>
 
         <executions>
+
           <execution>
             <id>install node and npm</id>
             <goals>
@@ -64,6 +64,7 @@
               <npmVersion>${npm.version}</npmVersion>
             </configuration>
           </execution>
+
           <execution>
             <id>npm install</id>
             <goals>

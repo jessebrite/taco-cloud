@@ -1,9 +1,9 @@
-package tacos.data;
+package com.onus.tacoclouddata;
 
+import com.onus.tacoclouddomain.Order;
+import com.onus.tacoclouddomain.User;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.repository.CrudRepository;
-import tacos.Order;
-import tacos.User;
 
 import java.util.List;
 

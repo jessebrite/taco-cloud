@@ -1,4 +1,4 @@
-package tacos.security;
+package com.onus.tacocloudsecurity;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -15,6 +15,9 @@ import javax.annotation.Resource;
 @Configuration
 @EnableWebSecurity
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
+
+	@Resource(name = "userRepositoryUserDetailsService")
+	private	UserDetailsService userDetailsService;
 
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
@@ -36,17 +39,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 					.logoutSuccessUrl("/");
 	}
 
-	@Resource(name = "userRepositoryUserDetailsService")
-	UserDetailsService userDetailsService;
-
-//	use the next method "BCryptPasswordEncoder" instead
-//	only using for testing purposes
-//	@Bean
-//	public PasswordEncoder passwordEncoder() {
-//		return new StandardPasswordEncoder("53cr3t");
-//	}
-
-//	uncomment to use instead of the deprecated StandardPasswordEncoder
 	@Bean
 	public PasswordEncoder passwordEncoder() {
 		return new BCryptPasswordEncoder();
