@@ -5,13 +5,12 @@
 
   <parent>
     <groupId>com.onus</groupId>
-    <artifactId>taco-cloud</artifactId>
     <version>0.0.1-SNAPSHOT</version>
+    <artifactId>taco-cloud</artifactId>
   </parent>
 
   <artifactId>tacocloud-security</artifactId>
   <packaging>jar</packaging>
-  <version>0.0.1-SNAPSHOT</version>
   <name>tacocloud-security</name>
   <description>Taco Cloud Security</description>
 

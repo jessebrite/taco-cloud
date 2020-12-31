@@ -9,10 +9,10 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping(path = "orders", produces = "application/json")
 @CrossOrigin("*")
-public class OrderApiRepository {
+public class OrderApiController {
 	private final OrderRepository orderRepo;
 
-	public OrderApiRepository(OrderRepository orderRepo) {
+	public OrderApiController(OrderRepository orderRepo) {
 		this.orderRepo = orderRepo;
 	}
 

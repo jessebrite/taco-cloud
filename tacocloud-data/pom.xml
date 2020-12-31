@@ -9,11 +9,9 @@
     <version>0.0.1-SNAPSHOT</version>
   </parent>
 
-  <groupId>com.onus</groupId>
   <artifactId>tacocloud-data</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
   <name>tacocloud-data</name>
-  <description>Demo project for Spring Boot</description>
+  <description>Taco Cloud Data</description>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

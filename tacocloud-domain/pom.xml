@@ -7,14 +7,12 @@
     <groupId>com.onus</groupId>
     <artifactId>taco-cloud</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <relativePath/> <!-- lookup parent from repository -->
   </parent>
 
 <!--  <groupId>com.onus</groupId>-->
   <artifactId>tacocloud-domain</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
   <name>tacocloud-domain</name>
-  <description>Demo project for Spring Boot</description>
+  <description>Taco Cloud Domain</description>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
