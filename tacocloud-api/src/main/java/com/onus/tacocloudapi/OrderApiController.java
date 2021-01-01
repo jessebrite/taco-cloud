@@ -7,7 +7,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping(path = "orders", produces = "application/json")
+@RequestMapping(path = "/orders", produces = "application/json")
 @CrossOrigin("*")
 public class OrderApiController {
 	private final OrderRepository orderRepo;
