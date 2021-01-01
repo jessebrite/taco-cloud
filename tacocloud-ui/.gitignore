@@ -44,6 +44,7 @@ build/
 /out-tsc
 
 # dependencies
+/node
 /node_modules
 /target
 

@@ -12,7 +12,7 @@
   <artifactId>tacocloud-ui</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <name>tacocloud-ui</name>
-  <description>Taco Cloud</description>
+  <description>Taco Cloud UI</description>
 
   <properties>
     <node.version>v14.15.3</node.version>

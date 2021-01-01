@@ -5,8 +5,8 @@
 
   <parent>
     <groupId>com.onus</groupId>
-    <version>0.0.1-SNAPSHOT</version>
     <artifactId>taco-cloud</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
   </parent>
 
   <artifactId>tacocloud-security</artifactId>
