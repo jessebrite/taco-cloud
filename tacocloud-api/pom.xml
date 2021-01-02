@@ -20,7 +20,6 @@
   </properties>
 
   <dependencies>
-
     <!-- TacoCloud dependencies -->
     <dependency>
       <groupId>com.onus</groupId>
@@ -55,6 +54,12 @@
       <groupId>org.projectlombok</groupId>
       <artifactId>lombok</artifactId>
       <scope>provided</scope>
+    </dependency>
+
+    <!-- HAHEOAS-->
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-hateoas</artifactId>
     </dependency>
 
     <!-- Test dependencies -->
