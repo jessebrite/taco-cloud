@@ -4,7 +4,7 @@ import { AuthConfig } from 'angular-oauth2-oidc';
 export const authConfig: AuthConfig = {
 
   // Url of the Identity Provider
-  issuer: 'https://localhost:8443/oauth2/login', // TODO: FIX THIS...IT'S PROBABLY NOT RIGHT
+  issuer: 'https://localhost:8080/oauth2/login', // TODO: FIX THIS...IT'S PROBABLY NOT RIGHT
 
   // URL of the SPA to redirect the user to after login
   redirectUri: window.location.origin + '/index.html',
