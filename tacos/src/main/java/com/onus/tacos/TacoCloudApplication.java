@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import java.util.Collections;
 import java.util.Map;
 
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages = {"com.onus.tacoclouddata"})
 public class TacoCloudApplication {
 
 	public static void main(String[] args) {
