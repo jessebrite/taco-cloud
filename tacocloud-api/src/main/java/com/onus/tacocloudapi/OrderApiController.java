@@ -41,6 +41,7 @@ public class OrderApiController {
 
 		if (patch.getDeliveryName() != null)
 			order.setDeliveryName(patch.getDeliveryName());
+
 		if (patch.getDeliveryStreet() != null)
 
 			order.setDeliveryStreet(patch.getDeliveryStreet());
