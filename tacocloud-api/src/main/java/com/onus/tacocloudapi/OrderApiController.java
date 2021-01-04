@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping(path = "/orders", produces = "application/json")
 @CrossOrigin("*")
 public class OrderApiController {
-	
+
 	private final OrderRepository orderRepo;
 
 	public OrderApiController(OrderRepository orderRepo) {
@@ -44,7 +44,6 @@ public class OrderApiController {
 			order.setDeliveryName(patch.getDeliveryName());
 
 		if (patch.getDeliveryStreet() != null)
-
 			order.setDeliveryStreet(patch.getDeliveryStreet());
 
 		if (patch.getDeliveryCity() != null)
