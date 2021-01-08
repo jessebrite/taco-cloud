@@ -5,7 +5,7 @@ import com.onus.tacoclouddomain.Ingredient.Type;
 import lombok.Getter;
 import org.springframework.hateoas.RepresentationModel;
 
-public class IngredientResource extends RepresentationModel {
+public class IngredientResource extends RepresentationModel<IngredientResource> {
 
 	@Getter
 	private final String name;
