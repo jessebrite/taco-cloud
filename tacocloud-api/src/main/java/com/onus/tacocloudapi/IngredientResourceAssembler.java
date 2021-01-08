@@ -12,7 +12,6 @@ public class IngredientResourceAssembler extends
 
 	@Override
 	public IngredientResource toModel(Ingredient ingredient) {
-
 		return createModelWithId(ingredient.getId(), ingredient);
 	}
 }
