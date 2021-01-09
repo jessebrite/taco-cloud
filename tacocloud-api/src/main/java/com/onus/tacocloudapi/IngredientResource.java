@@ -3,9 +3,9 @@ package com.onus.tacocloudapi;
 import com.onus.tacoclouddomain.Ingredient;
 import com.onus.tacoclouddomain.Ingredient.Type;
 import lombok.Getter;
-import org.springframework.hateoas.RepresentationModel;
+import org.springframework.hateoas.EntityModel;
 
-public class IngredientResource extends RepresentationModel<IngredientResource> {
+public class IngredientResource extends EntityModel<IngredientResource> {
 
 	@Getter
 	private final String name;
