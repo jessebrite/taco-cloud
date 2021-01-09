@@ -39,10 +39,10 @@ public class DesignTacoController {
 
 		List<Taco> tacos = tacoRepo.findAll(pageRequest).getContent();
 		CollectionModel<EntityModel<Taco>> recentResources = CollectionModel.wrap(tacos);
+
 		recentResources.add(
 			linkTo(methodOn(DesignTacoController.class).recentTacos())
-			.withRel("recents"));
-
+				.withRel("recents"));
 		return recentResources;
 	}
 
