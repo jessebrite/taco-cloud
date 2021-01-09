@@ -31,6 +31,7 @@ export class DesignComponent implements OnInit {
   ngOnInit() {
     this.httpClient.get('http://localhost:8080/ingredients')
         .subscribe(data => {
+					console.log(data);
           this.allIngredients = data;
           this.wraps = this.allIngredients.filter(w => w.type === 'WRAP');
           this.proteins = this.allIngredients.filter(p => p.type === 'PROTEIN');

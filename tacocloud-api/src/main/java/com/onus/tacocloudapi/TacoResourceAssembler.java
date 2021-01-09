@@ -11,6 +11,11 @@ TacoResourceAssembler extends RepresentationModelAssemblerSupport<Taco, TacoReso
 	}
 
 	@Override
+	protected TacoResource instantiateModel(Taco taco) {
+		return new TacoResource(taco);
+	}
+
+	@Override
 	public TacoResource toModel(Taco taco) {
 		return createModelWithId(taco.getId(), taco);
 	}
