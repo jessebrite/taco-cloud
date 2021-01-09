@@ -3,13 +3,13 @@ package com.onus.tacocloudapi;
 import com.onus.tacoclouddomain.Taco;
 import lombok.Getter;
 import org.springframework.hateoas.CollectionModel;
-import org.springframework.hateoas.RepresentationModel;
+import org.springframework.hateoas.EntityModel;
 import org.springframework.hateoas.server.core.Relation;
 
 import java.util.Date;
 
 @Relation(value = "taco", collectionRelation = "tacos")
-public class TacoResource extends RepresentationModel<TacoResource> {
+public class TacoResource extends EntityModel<TacoResource> {
 
 	private static final IngredientResourceAssembler
 		ingredientAssembler = new IngredientResourceAssembler();
