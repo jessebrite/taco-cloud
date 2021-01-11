@@ -21,7 +21,6 @@ public class RecentTacosController {
 
 	private final TacoRepository tacoRepo;
 
-	@Autowired
 	public RecentTacosController(TacoRepository tacoRepo) {
 		this.tacoRepo = tacoRepo;
 	}
