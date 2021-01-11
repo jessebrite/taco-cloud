@@ -15,7 +15,6 @@ public class IngredientController {
 
 	private final IngredientRepository ingredientRepo;
 
-	@Autowired
 	public IngredientController(IngredientRepository ingredientRepo) {
 		this.ingredientRepo = ingredientRepo;
 	}
