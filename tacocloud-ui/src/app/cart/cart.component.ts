@@ -40,11 +40,12 @@ export class CartComponent implements OnInit {
     // this.model.tacos = this.cart.getItemsInCart();
     this.cart.getItemsInCart().forEach(cartItem => {
       this.model.tacos.push(cartItem.taco);
-    });
+		});
+
+		const url = 'http://localhost:8080/orders';
 
     this.httpClient.post(
-        'http://localhost:8080/orders',
-        this.model, {
+      url, this.model, {
             headers: new HttpHeaders().set('Content-type', 'application/json')
                     .set('Accept', 'application/json'),
         }).subscribe(r => this.cart.emptyCart());
