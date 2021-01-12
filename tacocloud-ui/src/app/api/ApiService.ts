@@ -1,14 +1,15 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Http } from '@angular/http';
 
 @Injectable()
 export class ApiService {
 
-  constructor(private http: Http) {
+  constructor(private httpClient: HttpClient) {
   }
 
   get(path: String) {
-    return this.http.get('http://localhost:8080' + path);
+		const url = 'http://localhost:8080';
+    return this.httpClient.get(`${url}/${path}`);
   }
 
 }
