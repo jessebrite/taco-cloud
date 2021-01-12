@@ -1,5 +1,4 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpModule } from '@angular/http';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { FormsModule } from '@angular/forms';
@@ -51,7 +50,6 @@ import { CartService } from './cart/cart-service';
   ],
   imports: [
     BrowserModule,
-    HttpModule,
     HttpClientModule,
     FormsModule,
     RouterModule.forRoot(routes),
