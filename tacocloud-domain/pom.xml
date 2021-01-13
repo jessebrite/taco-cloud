@@ -9,10 +9,10 @@
     <version>0.0.1-SNAPSHOT</version>
   </parent>
 
-<!--  <groupId>com.onus</groupId>-->
   <artifactId>tacocloud-domain</artifactId>
   <name>tacocloud-domain</name>
   <description>Taco Cloud Domain</description>
+  <packaging>jar</packaging>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -26,13 +26,12 @@
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-security</artifactId>
     </dependency>
-
-<!--    JPA-->
+    <!-- JPA -->
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-data-jpa</artifactId>
     </dependency>
-
+    <!-- Data Rest -->
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-data-rest</artifactId>
