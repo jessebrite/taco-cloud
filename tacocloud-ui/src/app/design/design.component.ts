@@ -29,7 +29,9 @@ export class DesignComponent implements OnInit {
 
   // tag::ngOnInit[]
   ngOnInit() {
-    this.httpClient.get('http://localhost:8080/ingredients')
+		const url = 'http://localhost:8080/ingredients';
+
+    this.httpClient.get(url)
         .subscribe(data => {
 					console.log(data);
           this.allIngredients = data;
@@ -52,9 +54,10 @@ export class DesignComponent implements OnInit {
 
   // tag::onSubmit[]
   onSubmit() {
+		const url = 'http://localhost:8080/design';
+
     this.httpClient.post(
-        'http://localhost:8080/design',
-        this.model, {
+			url, this.model, {
             headers: new HttpHeaders().set('Content-type', 'application/json'),
         }).subscribe(taco => this.cart.addToCart(taco));
 
