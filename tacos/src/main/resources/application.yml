@@ -1,10 +1,10 @@
 #server:
 #  port: 8443
 
-security:
-  user:
-    name: buzz
-    password: infinity
+#security:
+#  user:
+#    name: buzz
+#    password: infinity
 
 taco:
   orders:
@@ -15,9 +15,9 @@ taco:
     codes:
       abcdef: 10
 
-#logging:
-#  level:
-#    org.springframework.data.rest: debug
+logging:
+  level:
+    org.springframework.data.rest: debug
 
 spring:
   data:
@@ -25,9 +25,9 @@ spring:
       base-path: /api
 
 ---
-spring:
-  profiles:
-    active: prod
+#spring:
+#  profiles:
+#    active: prod
 
 #  datasource:
 #    url: jdbc:mysql://localhost/tacocloud
